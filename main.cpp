@@ -5,13 +5,10 @@ using namespace std;
 int CheckSumPossibility(int num, int arr[], int size)
 {
 	int subset[size+1][num+1];
-
 	for (int i = 0; i <= size; i++)
 		subset[i][0] = true;
-
 	for (int i = 1; i <= num; i++)
 		subset[0][i] = false;
-
 	for (int i = 1; i <= size; i++) {
 		for (int j = 1; j <= num; j++) {
 			if (j < arr[i - 1])
@@ -20,10 +17,7 @@ int CheckSumPossibility(int num, int arr[], int size)
 				subset[i][j] = subset[i - 1][j]
 							 ||  subset[i - 1][j - arr[i - 1]];
 		}
-		
-	
 	}
-
 	return subset[size][num];
 }
 
