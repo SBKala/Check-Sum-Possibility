@@ -27,22 +27,11 @@ int main(int argc, char** argv) {
 	int arraySize = sizeof(arr) / sizeof(arr[0]);
 	int num = 129;
 	int returnVal;
-	int i;
 	
-	for(i = 0; i < arraySize; ++i)
+	for(int i = 0; i < arraySize; ++i)
 	{
 		cin >> arr[i];
 	}
-
-    
-    if (CheckSumPossibility(num, arr, arraySize) == true)
-	 {
-	 	returnVal == 1;
-	 }
-	 else
-	 {
-	 	returnVal == 0;
-	 }
 	 
 	returnVal = CheckSumPossibility(num, arr, arraySize);
 	
